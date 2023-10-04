@@ -12,7 +12,8 @@ public class WortController implements ActionListener, KeyListener {
     private TXTSpeichern TXTspeichern;
     private npfeiler.model.JSONSpeichern JSONSpeichern;
 
-    private SpeichernStradegy speichern;
+    private TXTSpeichern TXTLaden;
+    private JSONSpeichern JSONLaden;
 
     /**
      * Konstrukter
@@ -23,6 +24,8 @@ public class WortController implements ActionListener, KeyListener {
         this.trainer = new WortTrainer();
         this.TXTspeichern = new TXTSpeichern();
         this.JSONSpeichern = new JSONSpeichern();
+        this.TXTLaden = new TXTSpeichern();
+        this.JSONLaden = new JSONSpeichern();
         this.trainer.getListe().addWort(new WortEintrag("Hund", "https://www.mera-petfood.com/files/_processed_/b/b/csm_iStock-521697453_bb8fbb7807.jpg"));
         this.trainer.getListe().addWort(new WortEintrag("Katze", "https://einfachtierisch.de/media/cache/article_main_image/cms/2015/09/Katze-lacht-in-die-Kamera-shutterstock-Foonia-76562038.jpg?266705"));
         this.trainer.getListe().addWort(new WortEintrag("Schwein", "https://assets.puzzlefactory.pl/puzzle/192/732/original.jpg"));
@@ -72,7 +75,10 @@ public class WortController implements ActionListener, KeyListener {
         } else if(e.getActionCommand().equals("b5")) {
             this.JSONSpeichern.speichern(trainer);
         } else if(e.getActionCommand().equals("b4")) {
-            this.trainer = this.speichern.laden();
+            this.trainer = this.TXTLaden.laden();
+            panel.setStatistik(trainer.getRichtig(), trainer.getFalsch());
+        } else if(e.getActionCommand().equals("b6")) {
+            this.trainer = this.JSONLaden.laden();
             panel.setStatistik(trainer.getRichtig(), trainer.getFalsch());
         }
     }

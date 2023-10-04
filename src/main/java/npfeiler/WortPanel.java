@@ -9,7 +9,7 @@ public class WortPanel extends JPanel {
 
     private JLabel l1,l2,l3,l4,l5,l6;
     private JTextField t;
-    private JButton b1,b2,b3,b4,b5;
+    private JButton b1,b2,b3,b4,b5,b6;
 
     /**
      * Konstruktor
@@ -25,6 +25,7 @@ public class WortPanel extends JPanel {
         GridLayout grid3 = new GridLayout(2,3);
         GridLayout grid4 = new GridLayout(1,2);
         GridLayout grid5 = new GridLayout(2,1);
+        GridLayout grid6 = new GridLayout(2,1);
 
         //Panels erstellen und Layouts setzen
         JPanel p1 = new JPanel();
@@ -42,6 +43,9 @@ public class WortPanel extends JPanel {
         JPanel p5 = new JPanel();
         p5.setLayout(grid5);
 
+        JPanel p6 = new JPanel();
+        p6.setLayout(grid6);
+
         //Labels, Buttons und Textfield setzen
         this.l1 = new JLabel("Welches Wort wird unten dargestellt (Eingabe zum Überprüfen)?");
         this.t = new JTextField(10);
@@ -53,7 +57,8 @@ public class WortPanel extends JPanel {
         this.b2 = new JButton("Wort hinzufügen");
         this.b3 = new JButton("Speichern TXT");
         this.b5 = new JButton("Speichern JSON");
-        this.b4 = new JButton("Laden");
+        this.b4 = new JButton("Laden TXT");
+        this.b6 = new JButton("Laden JSON");
         this.l6 = new JLabel();
 
         //Action- & KeyListener für Buttons & Textfield
@@ -68,6 +73,8 @@ public class WortPanel extends JPanel {
         t.addKeyListener(controller);
         b5.addActionListener(controller);
         b5.setActionCommand("b5");
+        b6.addActionListener(controller);
+        b6.setActionCommand("b6");
 
         //Komponenten adden
         p1.add(l1);
@@ -81,13 +88,16 @@ public class WortPanel extends JPanel {
         p3.add(b2);
 
         p4.add(p5);
-        p4.add(b4);
+        p4.add(p6);
 
         p2.add(p3);
         p2.add(p4);
 
         p5.add(b3);
         p5.add(b5);
+
+        p6.add(b4);
+        p6.add(b6);
 
         this.add(p1, BorderLayout.NORTH);
         this.add(l6, BorderLayout.CENTER);

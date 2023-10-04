@@ -47,7 +47,7 @@ public class JSONSpeichern implements SpeichernStradegy {
      * @return
      */
     public WortTrainer laden() {
-        return laden("Worttrainer.json");
+        return laden("WortTrainer.json");
     }
 
     /**
@@ -86,7 +86,7 @@ public class JSONSpeichern implements SpeichernStradegy {
         WortListe liste = new WortListe();
         for(int i = 0; i < jsonArray.length(); i++) {
             JSONObject jsonObject = jsonArray.getJSONObject(i);
-            liste.addWort(new WortEintrag(jsonObject.getString("word"), jsonObject.getString("translation")));
+            liste.addWort(new WortEintrag(jsonObject.getString("url"), jsonObject.getString("word")));
         }
         return liste;
     }
