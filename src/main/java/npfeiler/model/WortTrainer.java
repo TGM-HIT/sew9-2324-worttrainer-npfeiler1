@@ -37,6 +37,9 @@ public class WortTrainer {
     public WortListe getListe() {
         return this.liste;
     }
+    public int getAktuell() {
+        return this.aktuell;
+    }
     public void setListe(WortListe liste) {
         this.liste = liste;
     }
