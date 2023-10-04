@@ -1,7 +1,0 @@
-Hund;https://www.mera-petfood.com/files/_processed_/b/b/csm_iStock-521697453_bb8fbb7807.jpg
-Katze;https://einfachtierisch.de/media/cache/article_main_image/cms/2015/09/Katze-lacht-in-die-Kamera-shutterstock-Foonia-76562038.jpg?266705
-Schwein;https://assets.puzzlefactory.pl/puzzle/192/732/original.jpg
-Tiger;https://downloadwap.com/thumbs2/wallpapers/p2ls/2019/animals/43/5c2cf50e13580048.jpg
-
-Falsch: 1
-Richtig: 2

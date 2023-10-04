@@ -9,7 +9,7 @@ public class WortPanel extends JPanel {
 
     private JLabel l1,l2,l3,l4,l5,l6;
     private JTextField t;
-    private JButton b1,b2,b3,b4;
+    private JButton b1,b2,b3,b4,b5;
 
     /**
      * Konstruktor
@@ -24,6 +24,7 @@ public class WortPanel extends JPanel {
         GridLayout grid2 = new GridLayout(2,1);
         GridLayout grid3 = new GridLayout(2,3);
         GridLayout grid4 = new GridLayout(1,2);
+        GridLayout grid5 = new GridLayout(2,1);
 
         //Panels erstellen und Layouts setzen
         JPanel p1 = new JPanel();
@@ -38,6 +39,9 @@ public class WortPanel extends JPanel {
         JPanel p4 = new JPanel();
         p4.setLayout(grid4);
 
+        JPanel p5 = new JPanel();
+        p5.setLayout(grid5);
+
         //Labels, Buttons und Textfield setzen
         this.l1 = new JLabel("Welches Wort wird unten dargestellt (Eingabe zum Überprüfen)?");
         this.t = new JTextField(10);
@@ -47,7 +51,8 @@ public class WortPanel extends JPanel {
         this.l4 = new JLabel("Anzahl Wörter:");
         this.l5 = new JLabel("0");
         this.b2 = new JButton("Wort hinzufügen");
-        this.b3 = new JButton("Speichern");
+        this.b3 = new JButton("Speichern TXT");
+        this.b5 = new JButton("Speichern JSON");
         this.b4 = new JButton("Laden");
         this.l6 = new JLabel();
 
@@ -61,6 +66,8 @@ public class WortPanel extends JPanel {
         b4.addActionListener(controller);
         b4.setActionCommand("b4");
         t.addKeyListener(controller);
+        b5.addActionListener(controller);
+        b5.setActionCommand("b5");
 
         //Komponenten adden
         p1.add(l1);
@@ -73,11 +80,14 @@ public class WortPanel extends JPanel {
         p3.add(l5);
         p3.add(b2);
 
-        p4.add(b3);
+        p4.add(p5);
         p4.add(b4);
 
         p2.add(p3);
         p2.add(p4);
+
+        p5.add(b3);
+        p5.add(b5);
 
         this.add(p1, BorderLayout.NORTH);
         this.add(l6, BorderLayout.CENTER);

@@ -46,6 +46,9 @@ public class WortTrainer {
     public void setFalsch(int falsch) {
         this.falsch = falsch;
     }
+    public void setAktuell(int aktuell) {
+        this.aktuell = aktuell;
+    }
 
     /**
      * Gibt einen zufällien Worteintrag zurück

@@ -1,0 +1,6 @@
+Haus;https://www.haus.at
+Auto;https://www.auto.at
+Sonne;https://www.sonne.at
+
+Falsch: 0
+Richtig: -1
