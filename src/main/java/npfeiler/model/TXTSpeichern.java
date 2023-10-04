@@ -3,7 +3,7 @@ package npfeiler.model;
 import java.io.*;
 import java.util.ArrayList;
 
-public class TXTSpeichern {
+public class TXTSpeichern implements SpeichernStradegy {
 
     /**
      * Speichert einen Worttrainer in einer Textdatei
@@ -11,7 +11,8 @@ public class TXTSpeichern {
      * @param pfad
      */
 
-    public void speichern(WortTrainer trainer, String pfad){
+    @Override
+    public void speichern(WortTrainer trainer, String pfad) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(pfad));
             writer.write(trainer.getListe().toString());

@@ -1,6 +1,8 @@
 package npfeiler.model;
 
 public interface SpeichernStradegy {
-        void speichern(String pfad, WortTrainer trainer);
+
+        void speichern(WortTrainer trainer, String pfad);
+
         WortTrainer laden(String pfad);
 }
