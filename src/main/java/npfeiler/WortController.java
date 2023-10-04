@@ -1,7 +1,7 @@
 package npfeiler;
 
 import npfeiler.model.WortEintrag;
-import npfeiler.model.WortSpeichern;
+import npfeiler.model.TXTSpeichern;
 import npfeiler.model.WortTrainer;
 
 import java.awt.event.*;
@@ -11,7 +11,7 @@ public class WortController implements ActionListener, KeyListener {
     private WortFrame frame;
     private WortPanel panel;
     private WortTrainer trainer;
-    private WortSpeichern speichern;
+    private TXTSpeichern speichern;
 
     /**
      * Konstrukter
@@ -20,7 +20,7 @@ public class WortController implements ActionListener, KeyListener {
         this.panel = new WortPanel(this);
         this.frame = new WortFrame(this.panel);
         this.trainer = new WortTrainer();
-        this.speichern = new WortSpeichern();
+        this.speichern = new TXTSpeichern();
         this.trainer.getListe().addWort(new WortEintrag("Hund", "https://www.mera-petfood.com/files/_processed_/b/b/csm_iStock-521697453_bb8fbb7807.jpg"));
         this.trainer.getListe().addWort(new WortEintrag("Katze", "https://einfachtierisch.de/media/cache/article_main_image/cms/2015/09/Katze-lacht-in-die-Kamera-shutterstock-Foonia-76562038.jpg?266705"));
         this.trainer.getListe().addWort(new WortEintrag("Schwein", "https://assets.puzzlefactory.pl/puzzle/192/732/original.jpg"));

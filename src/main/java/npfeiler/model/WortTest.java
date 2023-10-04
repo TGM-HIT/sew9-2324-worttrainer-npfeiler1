@@ -49,7 +49,7 @@ public class WortTest {
         System.out.println("Anzahl der abgefragten Worte: " + (trainer.getRichtig()+ trainer.getFalsch()) +
                            "\nRichtig: " + trainer.getRichtig() + "\nFalsch: " + trainer.getFalsch());
 
-        WortSpeichern x = new WortSpeichern();
+        TXTSpeichern x = new TXTSpeichern();
         x.speichern(trainer, "Worttrainer.txt");
         WortTrainer trainer1 = new WortTrainer(liste, 0);
         trainer1.setRichtig(-1);

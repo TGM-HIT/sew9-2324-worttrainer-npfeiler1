@@ -3,7 +3,7 @@ package npfeiler.model;
 import java.io.*;
 import java.util.ArrayList;
 
-public class WortSpeichern {
+public class TXTSpeichern {
 
     /**
      * Speichert einen Worttrainer in einer Textdatei
