@@ -115,4 +115,13 @@ public class WortTrainer {
         String url = eingabe.substring((indexSemi +1),(eingabe.length()));
         return new WortEintrag(wort, url);
     }
+
+    /**
+     * Resetet die Statistik
+     */
+    public void reset() {
+        setFalsch(0);
+        setRichtig(0);
+    }
+
 }
